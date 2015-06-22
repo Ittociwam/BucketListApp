@@ -1,0 +1,49 @@
+
+body {position:relative;
+width:375px;
+height:700px;
+border:solid 1px;
+}
+
+div#header {position:relative;
+			width:375px;
+			height:10%;
+			border:solid ;
+			background-color:#A3AE7E;
+			color:#5C604D;
+			padding: 10px;
+}
+
+div#suggestions {position:relative;
+				width:375px;
+				height:45%;
+				border:solid 1px;
+				background-color:#5C604D;
+				color:#C8CFB4;
+}
+
+div#feed {position:relative;
+				width:375px;
+				height:25%;
+				border:solid 1px;
+				background-color:#5C604D;
+				color:#C8CFB4;
+}
+
+div#footer {position:relative;
+			width:375px;
+			height:20%;
+			border:solid 1px;
+			background-color:#C8CFB4;
+			color:#5C604D;
+}
+
+div#myBucket {position: fixed;
+				left:50px;
+				bottom: 75px;
+}
+
+div#createEvent{position: fixed;
+				left:325px;
+				bottom: 75px;
+				}
