@@ -1,0 +1,6 @@
+<div id = "eventInfo">
+<h1 id = "title"></h1>
+<img id = "pic"></h1>
+<p id = "location"></p>
+<p id = "description"></p>
+</div>
