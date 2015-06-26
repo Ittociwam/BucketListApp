@@ -1,63 +1,66 @@
 var suggestions;
 window.onload = function() {
-	var current = 0;
+	localStorage["current"] = 0;
 	getSuggestions();
+	setSuggestions(JSON.parse(localStorage["suggestions"]), localStorage["current"])
 	document.getElementById("suggestions").addEventListener("click", function() {
-		current = current + 4;
-		getSuggestions(current);
+		localStorage["current"] = parseInt(localStorage["current"]) + 4;
+		getSuggestions();
+		setSuggestions(JSON.parse(localStorage["suggestions"]), localStorage["current"])
+		
 	});
 }
 
-function getSuggestions(current) {
-	var request = new XMLHttpRequest();
-	request.onload = function() {
-		if (request.status >= 200 && request.status < 400) {
-			suggestions = JSON.parse(request.responseText);
-			setSuggestions(suggestions, current)
-		} else {
-			// We reached our target server, but it returned an error
-
-		}
-	};
-	request.open('GET', 'getSuggestions.php', true);
-	request.send();
+function getSuggestions() {
+	if (localStorage["suggestions"] == null) {
+		var request = new XMLHttpRequest();
+		request.onreadystatechange = function() {
+			if (request.status == 200 && request.readyState == 4) {
+				var suggestionsString = request.responseText;
+				localStorage["suggestions"] = suggestionsString;
+			}
+		};
+		request.open('GET', 'getSuggestions.php', false);
+		request.send();
+	}
+	
 }
 
 function setSuggestions(suggestions, current) {
 
+	current = parseInt(current)
+
 	if (!(current >= suggestions.length || current < 0)) {
-
-
-			current = current || 0;
-			var element = document.getElementById("suggestions");
-			while (element.firstChild) { // make sure old one is cleared out
-				element.removeChild(element.firstChild);
-			}
-
-			for (var i = 0; i < 4; i++) {
-				var sugDiv = document.createElement("DIV");
-				var sugImg = document.createElement("IMG");
-				var sugTitle = document.createElement("H1");
-				//var sugDesc = document.createElement("P");
-				console.log(suggestions[i + current]);
-				var sugTitleText = document.createTextNode(suggestions[i + current].title);
-				sugTitle.appendChild(sugTitleText);
-				//var srcDescText = document.createTextNode(suggestion.description);
-				sugImg.src = suggestions[i + current].imageLink;
-				sugTitle.className = "suggestionTitle";
-				sugDiv.appendChild(sugImg);
-				sugDiv.appendChild(sugTitle);
-				sugDiv.className = "suggestion";
-
-				element.appendChild(sugDiv);
-			}
+		current = current || 0;
+		var element = document.getElementById("suggestions");
+		while (element.firstChild) { // make sure old one is cleared out
+			element.removeChild(element.firstChild);
 		}
 
+		for (var i = 0; i < 4; i++) {
+			var sugDiv = document.createElement("DIV");
+			var sugImg = document.createElement("IMG");
+			var sugTitle = document.createElement("H1");
+			//var sugDesc = document.createElement("P");
+			console.log(suggestions[i + current]);
+			var sugTitleText = document.createTextNode(suggestions[i + current].title);
+			sugTitle.appendChild(sugTitleText);
+			//var srcDescText = document.createTextNode(suggestion.description);
+			sugImg.src = suggestions[i + current].imageLink;
+			sugTitle.className = "suggestionTitle";
+			sugDiv.appendChild(sugImg);
+			sugDiv.appendChild(sugTitle);
+			sugDiv.className = "suggestion";
+
+			element.appendChild(sugDiv);
+		}
 	}
 
+}
 
-	function display(suggestions) {
-		suggestions.forEach(function(suggestion) {
-			console.log("Title: " + suggestion.title + " Description: " + suggestion.description + " Location: " + suggestion.location + " Image Link: " + suggestion.imageLink); // 
-		})
-	}
+
+function display(suggestions) {
+	suggestions.forEach(function(suggestion) {
+		console.log("Title: " + suggestion.title + " Description: " + suggestion.description + " Location: " + suggestion.location + " Image Link: " + suggestion.imageLink); // 
+	})
+}
