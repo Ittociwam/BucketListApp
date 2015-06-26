@@ -24,3 +24,16 @@ function display(suggestions){
 
 	})
 }
+
+function photoDisplay(suggestions) {
+console.log(suggestions.stringify();
+	suggestions.forEach(function(suggestion) {
+	var a = suggestion.title;
+	document.getElementById("title").innerHTML = a;
+	var b = suggestion.imageLink;
+	document.getElementById("pic").innerHTML = b;
+	var c = suggestion.location;
+	document.getElementById("location").innerHTML = c;
+	var d = suggestion.description;
+	document.getElementById("description").innerHTML = d;
+}
