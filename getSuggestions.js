@@ -1,4 +1,3 @@
-var suggestions;
 window.onload = function() {
 	localStorage["current"] = 0;
 	getSuggestions();
@@ -7,7 +6,7 @@ window.onload = function() {
 		localStorage["current"] = parseInt(localStorage["current"]) + 4;
 		getSuggestions();
 		setSuggestions(JSON.parse(localStorage["suggestions"]), localStorage["current"])
-		
+
 	});
 }
 
@@ -23,7 +22,6 @@ function getSuggestions() {
 		request.open('GET', 'getSuggestions.php', false);
 		request.send();
 	}
-	
 }
 
 function setSuggestions(suggestions, current) {
@@ -59,8 +57,23 @@ function setSuggestions(suggestions, current) {
 }
 
 
+function photoDisplay(suggestions) {
+	console.log(suggestions.stringify());
+	suggestions.forEach(function(suggestion) {
+		var a = suggestion.title;
+		document.getElementById("title").innerHTML = a;
+		var b = suggestion.imageLink;
+		document.getElementById("pic").innerHTML = b;
+		var c = suggestion.location;
+		document.getElementById("location").innerHTML = c;
+		var d = suggestion.description;
+		document.getElementById("description").innerHTML = d;
+	});
+}
+
+
 function display(suggestions) {
 	suggestions.forEach(function(suggestion) {
-		console.log("Title: " + suggestion.title + " Description: " + suggestion.description + " Location: " + suggestion.location + " Image Link: " + suggestion.imageLink); // 
+		console.log("Title: " + suggestion.title + " Description: " + suggestion.description + " Location: " + suggestion.location + " Image Link: " + suggestion.imageLink);
 	})
 }
