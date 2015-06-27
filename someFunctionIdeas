@@ -1,0 +1,87 @@
+//CSS that Changes the function so you can see the div, not sure how to use this in my code yet
+document.getElementById('welcomeDiv').style.display = "block";
+
+//HTML for ^
+<input type = "text" size = "15" id = "hero" style="display:none;">
+<input type = "text" size = "15" id = "tool" style="display:none;">
+<input type = "text" size = "15" id = "monster" style="display:none;">
+<input type = "text" size = "15" id = "element" style="display:none;">
+<br/>
+//This could be really good code for the divs to change the display of the div in the app.
+
+
+//This is another example of the code here:
+CSS//
+summary::-webkit-details-marker {
+ color: #00ACF3;
+ font-size: 125%;
+ margin-right: 2px;
+}
+summary:focus {
+	outline-style: none;
+}
+article > details > summary {
+	font-size: 28px;
+	margin-top: 16px;
+}
+details > p {
+	margin-left: 24px;
+}
+details details {
+	margin-left: 36px;
+}
+details details summary {
+	font-size: 16px;
+}
+
+
+HTML//
+<body>
+    <section>
+      <article>
+        <details>
+          <summary>Step by Step Guides</summary>
+          <details>
+            <summary>Getting Started</summary>
+            <p>1. Signup for a free trial</p>
+          </details>
+          <details>
+            <summary>Setting up a backup schedule</summary>
+            <p>This step assumes you have already signed up and installed the software</p>
+          </details>
+        </details>
+        <details>
+          <summary>Installation/Upgrade Issues</summary>
+          <p>After setup the program doesn't start</p>
+        </details>
+      </article>
+      
+      <article>
+        <details>
+          <summary>SERVER Step by Step Guides</summary>
+          <details>
+            <summary>Getting Started</summary>
+            <p>1. Signup for a free trial</p>
+          </details>
+          <details>
+            <summary>Setting up a backup schedule</summary>
+            <p>This step assumes you have already signed up and installed the software</p>
+          </details>
+        </details>
+        <details>
+          <summary>Installation/Upgrade Issues</summary>
+          <p>After setup the program doesn't start</p>
+        </details>
+      </article> 
+
+</section>
+</body>
+
+
+
+
+
+//Reset Button Function from W3 Schools
+function erase(){
+document.getElementById("narrative").reset();
+}
