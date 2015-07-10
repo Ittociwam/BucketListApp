@@ -4,7 +4,11 @@
         <title>Bucket List App</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <script src='getSuggestions.js'></script>
+<script src='swipeCode.js'></script>
+
+
 <link href = "style.css" rel = "stylesheet" type = "text/css">
 
 </head>
@@ -21,7 +25,9 @@
             <strong>Activity</strong>
         </div>
         
-<div id = "suggestions">
+<div id = "suggestions" ontouchstart="swipeDetecter.touchStartHandler(event)" 
+                        ontouchend="swipeDetecter.touchEndHandler(event)" 
+                        ontouchmove="swipeDetecter.touchMoveHandler(event)">
             <!--This div will hold the swipe button that leads the the suggestions feed-->
 
 </div>

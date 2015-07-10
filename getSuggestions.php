@@ -1,5 +1,5 @@
 <?php
-include 'suggestion.php';
+include 'Suggestion.php';
 
 //$suggestions = new array();
 
