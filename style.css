@@ -184,3 +184,211 @@ div.suggestion{
 
 }
 }
+
+div.activityOne {
+    width: 300px;
+    height: 100px;
+	top: 100px;
+    left: 0px;
+    background-color: #5C604D;
+    position: fixed;
+    -webkit-animation-name: exampleOne; /* Chrome, Safari, Opera */
+    -webkit- animation-delay: 30s;
+    -webkit-animation-duration: 55s; /* Chrome, Safari, Opera */
+    animation-name: exampleOne;
+       animation-delay: 30s;
+    animation-duration: 55s;
+    margin: 10px;
+}
+
+div.activityTwo {
+    width: 300px;
+    height: 100px;
+    top: 100px;
+    left: 400px;
+    background-color: #5C604D;
+    position: fixed;
+    -webkit-animation-name: exampleTwo; /* Chrome, Safari, Opera */
+    -webkit- animation-delay: 15s;
+    -webkit-animation-duration: 25s; /* Chrome, Safari, Opera */
+    animation-name: exampleTwo;
+    animation-delay: 15s;
+    animation-duration:25s;
+    margin: 10px;
+}
+
+div.activityThree {
+  width: 300px;
+    height: 100px;
+    top: 100px;
+     left: 400px;
+    background-color: #5C604D;
+    position: fixed;
+    -webkit-animation-name: exampleThree; /* Chrome, Safari, Opera */
+    -webkit- animation-delay: 30s;
+    -webkit-animation-duration: 25s; /* Chrome, Safari, Opera */
+    animation-name: exampleThree;
+    animation-delay: 30s;
+    animation-duration: 25s;
+    margin: 10px;
+}
+
+div.activityFour {
+    width: 300px;
+    height: 100px;
+    top: 100px;
+    left: 400px;
+    background-color: #5C604D;
+    position: fixed;
+    -webkit-animation-name: exampleFour; /* Chrome, Safari, Opera */
+    -webkit- animation-delay: 45s;
+    -webkit-animation-duration: 25s; /* Chrome, Safari, Opera */
+    animation-name: exampleFour;
+    animation-delay: 45s;
+    animation-duration: 25s;
+    margin: 10px;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes exampleOne {
+    0%   {left:0; top:100px;}
+    0.1%  {left:79px; top:100px;}
+    0.3%  {left:156px; top:100px;}
+    0.5%  {left:233px; top:100px;}
+    0.7% {left: 310px; top:100px;}
+    0.8% {left: 400px; top:100px;}
+    40% {left:400px; top:100px;}
+    50% {left:400px; top:100px;}
+    60% {left:400px; top:100px;}
+    70% {left:400px; top:100px;}
+    80% {left:400px; top:100px;}
+    90% {left:400px; top:100px;}
+    98%   {left:400px; top:100px;}
+    98.5%  {left:233px; top:100px;}
+    99%  {left:156px; top:100px;}
+    99.5%  {left:79px; top:100px;}
+    100%  {left:0px; top:100px;}
+}
+
+/* Standard syntax */
+@keyframes exampleOne {
+    0%   {left:0; top:100px;}
+    0.1%  {left:79px; top:100px;}
+    0.3%  {left:156px; top:100px;}
+    0.5%  {left:233px; top:100px;}
+    0.7% {left: 310px; top:100px;}
+    0.8% {left: 400px; top:100px;}
+    40% {left:400px; top:100px;}
+    50% {left:400px; top:100px;}
+    60% {left:400px; top:100px;}
+    70% {left:400px; top:100px;}
+    80% {left:400px; top:100px;}
+    90% {left:400px; top:100px;}
+    98%   {left:400px; top:100px;}
+    98.5%  {left:233px; top:100px;}
+    99%  {left:156px; top:100px;}
+    99.5%  {left:79px; top:100px;}
+    100%  {left:0px; top:100px;}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes exampleTwo {
+    0%   {left:400px; top:100px;}
+    0.1%  {left:323px; top:100px;}
+    0.3%  {left:246px; top:100px;}
+    0.5%  {left:169px; top:100px;}
+    0.7%  {left:79px; top:100px;}
+    0.8% {left: 0px; top:100px;}
+    40% {left:0px; top:100px;}
+    50% {left:0px; top:100px;}
+    60% {left:0px; top:100px;}
+    70% {left:0px; top:100px;}
+    80% {left:0px; top:100px;}
+    90% {left:0px; top:100px;}
+    100% {left:0px; top:100px;}
+}
+
+/* Standard syntax */
+@keyframes exampleTwo {
+    0%   {left:400px; top:100px;}
+    0.1%  {left:323px; top:100px;}
+    0.3%  {left:246px; top:100px;}
+    0.5%  {left:169px; top:100px;}
+    0.7%  {left:79px; top:100px;}
+    0.8% {left: 0px; top:100px;}
+    40% {left:0px; top:100px;}
+    50% {left:0px; top:100px;}
+    60% {left:0px; top:100px;}
+    70% {left:0px; top:100px;}
+    80% {left:0px; top:100px;}
+    90% {left:0px; top:100px;}
+    100% {left:0px; top:100px;}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes exampleThree {
+    0%   {left:400px; top:100px;}
+    0.1%  {left:323px; top:100px;}
+    0.3%  {left:246px; top:100px;}
+    0.5%  {left:169px; top:100px;}
+    0.7%  {left:79px; top:100px;}
+    0.8% {left: 0px; top:100px;}
+    40% {left:0px; top:100px;}
+    50% {left:0px; top:100px;}
+    60% {left:0px; top:100px;}
+    70% {left:0px; top:100px;}
+    80% {left:0px; top:100px;}
+    90% {left:0px; top:100px;}
+    100% {left:0px; top:100px;}
+}
+
+/* Standard syntax */
+@keyframes exampleThree {
+    0%   {left:400px; top:100px;}
+    0.1%  {left:323px; top:100px;}
+    0.3%  {left:246px; top:100px;}
+    0.5%  {left:169px; top:100px;}
+    0.7%  {left:79px; top:100px;}
+    0.8% {left: 0px; top:100px;}
+    40% {left:0px; top:100px;}
+    50% {left:0px; top:100px;}
+    60% {left:0px; top:100px;}
+    70% {left:0px; top:100px;}
+    80% {left:0px; top:100px;}
+    90% {left:0px; top:100px;}
+    100% {left:0px; top:100px;}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes exampleFour {
+    0%   {left:400px; top:100px;}
+    0.1%  {left:323px; top:100px;}
+    0.3%  {left:246px; top:100px;}
+    0.5%  {left:169px; top:100px;}
+    0.7%  {left:79px; top:100px;}
+    0.8% {left: 0px; top:100px;}
+    40% {left:0px; top:100px;}
+    50% {left:0px; top:100px;}
+    60% {left:0px; top:100px;}
+    70% {left:0px; top:100px;}
+    80% {left:0px; top:100px;}
+    90% {left:0px; top:100px;}
+    100% {left:0px; top:100px;}
+}
+
+/* Standard syntax */
+@keyframes exampleFour {
+    0%   {left:400px; top:100px;}
+    0.1%  {left:323px; top:100px;}
+    0.3%  {left:246px; top:100px;}
+    0.5%  {left:169px; top:100px;}
+    0.7%  {left:79px; top:100px;}
+    0.8% {left: 0px; top:100px;}
+    40% {left:0px; top:100px;}
+    50% {left:0px; top:100px;}
+    60% {left:0px; top:100px;}
+    70% {left:0px; top:100px;}
+    80% {left:0px; top:100px;}
+    90% {left:0px; top:100px;}
+    100% {left:0px; top:100px;}
+}
