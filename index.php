@@ -7,9 +7,11 @@
 
 <script src='getSuggestions.js'></script>
 <script src='swipeCode.js'></script>
+<script src='overlay.js'></script>
 
 
 <link href = "style.css" rel = "stylesheet" type = "text/css">
+<link href = "overlay.css" rel ="stylesheet" type ="text/css">
 
 </head>
     
@@ -30,6 +32,27 @@
 
 <div class = "activityFour"><img src = "images/broken_image.jpg" align = "left" height = "60px" width "60px"><p>Robert checked off "Stop being Single" from his Bucket List (Just Kidding, but I needed a fourth slot)</p></div>
         </div>
+		<div id="loginScreen">
+ 
+		<div id = "nameTitle" align="center">
+		<a href="#" class="cancel">&times;</a> 
+		<h3>What is your event?</h3>
+		<input type = "text">
+		</div>
+
+		<div id = "descriptionOfEvent" align="center">
+		<h6>What do you do?</h6>
+
+		<input type = "text" id = "description" align="center"></input>
+
+		<button id = "image" type = "button" onclick = "imageUpload()" ><img src = "camera.png"></button>
+
+		<button id = "add" type = "button" onclick = "uploadEvent()">Add</button>
+
+		</div>
+
+		</div> 
+		<div id="cover" onClick = "cancel()"> </div>
         
 <div id = "suggestions" ontouchstart="swipeDetecter.touchStartHandler(event)" 
                         ontouchend="swipeDetecter.touchEndHandler(event)" 
@@ -40,7 +63,8 @@
 
 <div id = "footer">
             <div id = "myBucket"><a href="w3schools.com"><img src = "images/Bucket_32.png" alt = "Bucket Icon"></a></div>
-             <div id ="createEvent"><a href="w3schools.com"><img src = "images/Add_anchor_point_32.png" alt = "Add to List Icon"></a></div>
+             <div id ="createEvent" onClick="showDiv()"><img src = "images/Add_anchor_point_32.png" alt = "Add to List Icon"></div>
+ 
 </div>
 </body>
 </html>
